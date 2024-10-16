@@ -221,9 +221,9 @@ function getModelViewMatrix() {
  * position to the target position.
  * The next 5 seconds, the cube should return to its initial position.
  */
-function getPeriodicMovement() {
+function getPeriodicMovement(startTime) {
   // Get the current time in seconds
-  const currentTime = Date.now() / 1000;
+  const currentTime = (Date.now() - startTime) / 1000;
   // Loop the animation every 10 seconds
   const elapsedTime = currentTime % 10;
 
